@@ -27,7 +27,9 @@ export class AuthService {
   }
 
   usuarioEstaAutenticado(){
-    return this.usuarioAutenticado;
+    if(localStorage.getItem('usuarioLogado'))
+        return true;
+    return false;
   }
 
 }
